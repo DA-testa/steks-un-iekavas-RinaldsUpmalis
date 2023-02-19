@@ -33,6 +33,11 @@ def main():
     text = input()
     if text[0]=="I":
         text=input()
+    elif text[0]=="F":
+        filename = input()
+        with open(filename, 'r') as file:
+            text = file.read()
+
     mismatch = find_mismatch(text)
 
     if not mismatch:
